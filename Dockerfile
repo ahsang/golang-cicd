@@ -41,5 +41,6 @@ COPY --from=builder /go/bin/outyet /go/bin/outyet
 
 # Use an unprivileged user.
 USER appuser:appuser
+EXPOSE 8080
 # Run the outyet binary.
 ENTRYPOINT ["/go/bin/outyet"]
